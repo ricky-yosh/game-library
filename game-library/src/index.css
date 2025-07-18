@@ -17,12 +17,11 @@ a {
 }
 
 /* Header styles */
+
 .header {
-    padding: 1rem 2rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .tiled-background {
@@ -102,9 +101,6 @@ a {
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .header {
-        padding: 1rem;
-    }
 
     .website-banner {
         font-size: 2rem;
@@ -117,6 +113,10 @@ a {
     .page {
         padding: 1rem;
         border-radius: 12px;
+    }
+
+    .page-content h2 {
+        font-size: 1.7rem !important;
     }
 }
 
@@ -132,6 +132,9 @@ a {
     .page {
         padding: 0.75rem;
         border-radius: 8px;
+    }
+    .page-content h2 {
+        font-size: 1.4rem !important;
     }
 }
 
