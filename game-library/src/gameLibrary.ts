@@ -4,42 +4,20 @@ export interface Game {
     description?: string;
     thumbnail?: string;
     gamePath: string;
-    width: number;
-    height: number;
+    aspectRatio: string;
+    githubLink: string;
 }
 
 export const gameLibrary = [
     {
-        id: 'space-shooter',
-        title: 'Space Shooter',
+        id: 'project-boost',
+        title: 'Project Boost',
         description: 'A classic arcade-style space shooter game',
-        thumbnail: 'https://via.placeholder.com/300x200/4a90e2/ffffff?text=Space+Shooter',
-        gamePath: '/games/space-shooter', // Path to your Godot game files
+        thumbnail: './games/project-boost/project-boost.png',
+        gamePath: 'games/project-boost',
         genre: 'Action',
-        controls: 'Keyboard & Mouse',
-        width: 800,
-        height: 600,
-    },
-    {
-        id: 'space-shooter',
-        title: 'Space Shooter',
-        description: 'A classic arcade-style space shooter game',
-        thumbnail: 'https://via.placeholder.com/300x200/4a90e2/ffffff?text=Space+Shooter',
-        gamePath: '/games/space-shooter', // Path to your Godot game files
-        genre: 'Action',
-        controls: 'Keyboard & Mouse',
-        width: 800,
-        height: 600,
-    },
-    {
-        id: 'space-shooter',
-        title: 'Space Shooter',
-        description: 'A classic arcade-style space shooter game',
-        thumbnail: 'https://via.placeholder.com/300x200/4a90e2/ffffff?text=Space+Shooter',
-        gamePath: '/games/space-shooter', // Path to your Godot game files
-        genre: 'Action',
-        controls: 'Keyboard & Mouse',
-        width: 800,
-        height: 600,
+        controls: 'A - Left, D - Right, Spacebar - Thrust',
+        aspectRatio: "16/9",
+        githubLink: 'https://github.com/ricky-yosh/project-boost',
     },
 ]

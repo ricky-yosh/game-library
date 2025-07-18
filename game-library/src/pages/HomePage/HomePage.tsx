@@ -13,7 +13,7 @@ export default function HomePage() {
 
     return (
         <div className='page-content'>
-            <h2>Games</h2>
+            <h2>New Games</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
                 {gameLibrary.map((game) => (
                     <button 

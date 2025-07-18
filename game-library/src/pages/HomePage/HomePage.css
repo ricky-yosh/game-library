@@ -8,7 +8,7 @@
 .page-content h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #1f2937;
+    color: #93b7c2;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -80,77 +80,11 @@
     text-align: left;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .page-content {
-        padding: 1.5rem;
-    }
-    
-    .page-content > div {
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .page-content {
-        padding: 1rem;
-    }
-    
-    .page-content h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
-    
-    .card {
-        width: 280px;
-    }
-}
-
-@media (max-width: 640px) {
-    .page-content > div {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
-    
-    .page-content h2 {
-        font-size: 1.75rem;
-    }
-}
-
 /* Loading state (if needed) */
 .loading {
     text-align: center;
     padding: 2rem;
     color: #6b7280;
-}
-
-/* Empty state (if needed) */
-.empty-state {
-    text-align: center;
-    padding: 4rem 2rem;
-    color: #6b7280;
-}
-
-.empty-state h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #374151;
-}
-
-/* Focus styles for accessibility */
-.page-content button:focus {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
-}
-
-.page-content button:focus-visible {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
 }
 
 /* Hover effects for better interactivity */
