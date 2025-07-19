@@ -1,0 +1,156 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #eee;
+    min-height: 100vh;
+}
+
+a {
+    color: whitesmoke;
+}
+
+/* Header styles */
+
+.header {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.tiled-background {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);
+    position: relative;
+}
+
+.tiled-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 40% 80%, rgba(120, 119, 198, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.website-title {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+.website-title:hover {
+    transform: translateY(-2px);
+    transition: transform 0.3s ease;
+}
+
+.website-banner {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease infinite;
+    text-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Content area */
+.content {
+    min-height: calc(100vh - 120px);
+    padding: 2rem;
+}
+
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+    .website-banner {
+        font-size: 2rem;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .page {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .page-content h2 {
+        font-size: 1.7rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .website-banner {
+        font-size: 1.5rem;
+    }
+
+    .content {
+        padding: 0.5rem;
+    }
+
+    .page {
+        padding: 0.75rem;
+        border-radius: 8px;
+    }
+    .page-content h2 {
+        font-size: 1.4rem !important;
+    }
+}
+
+/* Additional utility classes for game library theme */
+.game-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.game-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    border-color: rgba(120, 119, 198, 0.3);
+}
