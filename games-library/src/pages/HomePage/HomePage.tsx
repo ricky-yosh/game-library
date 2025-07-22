@@ -1,4 +1,4 @@
-import { gameLibrary, type Game } from '../../gameLibrary'
+import { gamesLibrary, type Game } from '../../gameLibrary'
 import { useNavigate } from 'react-router-dom'
 import "./HomePage.css"
 
@@ -15,7 +15,7 @@ export default function HomePage() {
         <div className='page-content'>
             <h2>New Games</h2>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                {gameLibrary.map((game) => (
+                {gamesLibrary.map((game) => (
                     <button 
                         key={game.id} 
                         onClick={() => handleSelectGame(game)}
@@ -24,7 +24,7 @@ export default function HomePage() {
                         <div className='card'>
                             {game.thumbnail && (
                                 <img
-                                    src={game.thumbnail.startsWith('http') ? game.thumbnail : `${base}/${game.thumbnail}`}
+                                    src={game.thumbnail.startsWith('http') ? game.thumbnail : `${base}${game.thumbnail.replace(/^\/+/, '')}`}
                                     alt={game.title}
                                     className='thumbnail-image'
                                 />

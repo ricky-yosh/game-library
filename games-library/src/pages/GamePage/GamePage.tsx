@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { gameLibrary } from '../../gameLibrary'
+import { gamesLibrary } from '../../gameLibrary'
 import { useRef, useState, useEffect } from 'react'
 import './GamePage.css'
 
@@ -11,7 +11,7 @@ export default function GamePage() {
     const gamePlayerRef = useRef<HTMLDivElement | null>(null)
     const [isFullscreen, setIsFullscreen] = useState(false)
 
-    const game = gameLibrary.find(g => g.id === gameId)
+    const game = gamesLibrary.find(g => g.id === gameId)
 
     // Listen for fullscreen changes
     useEffect(() => {

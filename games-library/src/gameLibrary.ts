@@ -8,7 +8,7 @@ export interface Game {
     githubLink: string;
 }
 
-export const gameLibrary = [
+export const gamesLibrary = [
     {
         id: 'project-boost',
         title: 'Project Boost',
