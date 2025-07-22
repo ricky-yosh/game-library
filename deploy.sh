@@ -3,13 +3,13 @@
 set -e
 
 # Vars
-BUILD_DIR="./game-library/dist"
+BUILD_DIR="./games-library/dist"
 TEMP_DIR=$(mktemp -d)
 REPO_URL=$(git config --get remote.origin.url)
 
 # Build the project
 echo "Running build..."
-cd game-library
+cd games-library
 npm install
 npm run build
 cd ..
@@ -44,7 +44,7 @@ git checkout main
 rm -rf "$TEMP_DIR"
 
 # Get node modules back
-cd game-library
+cd games-library
 npm install
 cd ..
 
